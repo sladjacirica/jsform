@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Web programiranje</title>
+		<meta charset="utf-8"/>
+		<link href="css/stil.css" rel="stylesheet" type="text/css"/>	
+	</head>
+	<body>
+		<div class="region">
+			<a href="index.html"><img src="img/slide2.png" alt="Logo"/></a>
+		</div>
+		<style>
+			.region img{
+				width:10%;
+			}
+			</style>
+		<div class="cistac"></div>
+		
+		<div id="mojOkvir">
+			<h2>Unos studenta</h2><br><br>
+					<div id="okvir"> 
+					<form  method="GET" action="obrada.php" name="formular1"/>
+						<table>
+							<tr>
+								<td>Ime i prezime:</td>    <!--value= "Molimo vas unesite ime”-->
+								<td><input type="text" id="tbImePrezime" name="tbImePrezime"  onfocus="myFunction(this)"
+								onBlur="proverajedan(this.value);"/><span id="greskaone"></span> </td>
+							</tr>
+							<tr>
+								<td>Broj indeksa:</td>
+								<td><input type="text" id="tbBrojIndeksa" name="tbBrojIndeksa" onBlur="proveradva(this.value);" /><span id="greskadva"></span></td>
+							</tr>	
+							<tr>
+								<td>Email adresa:</td>
+								<td><input type="text" id="tbEmail" name="tbEmail" onBlur="proveratri(this.value);" /><span id="greskatri"></span></td>
+							</tr>					
+							<tr>
+								<td>Status:</td>
+								<td>
+									<input type="radio" name="rbStatus" value="B"/>Budžet<br/>
+									<input type="radio" name="rbStatus" value="S"/>Samofinansiranje
+								</td>
+							</tr>
+							<tr>
+								<td>Smer:</td>
+								<td >
+									<select id="lista" onclick="myFunction1()">
+										<option value="VrednostOptionTaga">Ovde kao tekst</option>
+										<option></option>
+										<option></option>
+										<option></option>
+									</select>
+								</td>
+							</tr>				
+							<tr>
+								<td>Predmeti:</td>
+								<td>
+									<input type="checkbox" name="chbPredmeti" value="Web dizajn"/>Web dizajn - HTML i CSS<br/>
+									<input type="checkbox" name="chbPredmeti" value="Web programiranje"/>Web programiranje - JavaScript<br/>
+									<input type="checkbox" name="chbPredmeti" value="PHP"/>Web programiranje PHP<br/>
+									<input type="checkbox" name="chbPredmeti" value="ASP.NET"/>Web programiranje ASP.NET
+								</td>
+							</tr>
+							<tr>
+								<td>Taster:</td>
+								<td>
+								<input type="button" value="Klikni" id="taster"  onClick="proverasmera();"  /></td>
+							</tr>
+							
+						</table>
+					</form>			
+				</div>
+			<div style="clear: both;"></div>		
+		</div>
+		<div class="cistac"></div>		
+		<script src="resenje.js" type="text/javascript"></script>		
+	</body>
+</html>
